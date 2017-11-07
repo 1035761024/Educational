@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
     <!-- !!!! Driver Class Path !!!! -->
-    <classPathEntry location="/Users/excalibur/Downloads/Dev/JARS/DBDriver/ojdbc6-12.1.0.2.jar"/>
+    <classPathEntry location="E:\maven\pro\com\oracle\ojdbc6\11.2.0.1.0\ojdbc6-11.2.0.1.0.jar"/>
 
     <context id="context" targetRuntime="MyBatis3">
         <property name="javaFileEncoding" value="utf-8"/>
@@ -16,7 +16,7 @@
         </commentGenerator>
 
         <!-- !!!! Database Configurations !!!! -->
-        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@//10.211.55.4:1521/orcl"
+        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:orcl"
                         userId="eduManager" password="123456"/>
 
         <javaTypeResolver>
@@ -79,10 +79,30 @@
             <generatedKey column="teach_id" sqlStatement="select teacher_seq.nextval from dual"/>
         </table>
 -->
-        <table tableName="user_department" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <!-- <table tableName="user_department" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false" domainObjectName="Department">
             <property name="ignoreQualifiersAtRuntime" value="false"/>
             <generatedKey column="dept_id" sqlStatement="select dept_seq.nextval from dual"/>
+        </table> -->
+        <!-- <table tableName="t_classes" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false" domainObjectName="Classes">
+            <property name="ignoreQualifiersAtRuntime" value="false"/>
+            <generatedKey column="class_id" sqlStatement="select classes_seq.nextval from dual"/>
+        </table>
+        <table tableName="t_stage" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false" domainObjectName="Stage">
+            <property name="ignoreQualifiersAtRuntime" value="false"/>
+            <generatedKey column="stage_id" sqlStatement="select stage_seq.nextval from dual"/>
+        </table>
+        <table tableName="class_stage" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false" domainObjectName="Class_Stage">
+            <property name="ignoreQualifiersAtRuntime" value="false"/>
+            <generatedKey column="id" sqlStatement="select class_stage_seq.nextval from dual"/>
+        </table> -->
+        <table tableName="t_info" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+                enableUpdateByExample="false" domainObjectName="Info">
+                <property name="ignoreQualifiersAtRuntime" value="false"/>
+                <generatedKey column="info_id" sqlStatement="select info_seq.nextval from dual"/>
         </table>
     </context>
 </generatorConfiguration>

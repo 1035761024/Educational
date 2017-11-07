@@ -229,7 +229,7 @@
       <groupId>org.activiti</groupId>
       <artifactId>activiti-engine</artifactId>
       <version>5.22.0</version>
-      <exclusions>
+<!--       <exclusions>
         <exclusion>
           <artifactId>slf4j-api</artifactId>
           <groupId>org.slf4j</groupId>
@@ -250,7 +250,7 @@
           <artifactId>commons-lang3</artifactId>
           <groupId>org.apache.commons</groupId>
         </exclusion>
-      </exclusions>
+      </exclusions> -->
     </dependency>
     <dependency>
       <groupId>org.activiti</groupId>
